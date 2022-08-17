@@ -17,7 +17,7 @@ function Header() {
           <div className=' pr-24'>
           <input className=' w-56 h-7 pr-1' type="text" placeholder='نام محصول را جستوجو کنید' />  
           </div>
-          <img className=' w-8 h-8' src={shopcart}/>
+          <img className=' w-8 h-8 cursor-pointer' src={shopcart}/>
           <a className=' p-[2px]' href="#">ورود</a>
           <div>|</div>
           <a className=' p-[0px]' href="#">ثبت نام</a>

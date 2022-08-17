@@ -4,12 +4,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import Header from './components/Header/Header';
 import Home from './pages/home';
+import Detail from './pages/detail';
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./styles.css";
-
 import { Autoplay, Pagination, Navigation } from "swiper";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 
 function App() {
   return (
@@ -36,9 +38,18 @@ function App() {
       </Swiper>
 
       <h1 className=' text-3xl mr-[44%] mt-10'>محصولات جدید </h1>
+
+      <BrowserRouter>
+      <Switch>
+        <Route exact path='/'>
+          <Home />
+        </Route>
+        <Route path='/Detail/:id'>
+          <Detail />
+        </Route>
+      </Switch>
+      </BrowserRouter>
       
-    <Home />
-    
     </div>
   );
 }
